@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+ {% block content %}
+ <br>
+  <div class = "w3-row-padding">
+    <div class="w3-half">
+	   <div class="w3-container w3-padding w3-card-4 w3-white-gray">
+	     <center>
+		   <br>
+		    <div id ="mycamera">
+		 </center>
+		 <p>
+		   <label><b>IDNO</b></label>
+		   <input type ="number" name ="idno" id="idno" class="w3-input w3-border">
+		 </p>
+		 <p>
+		   <label><b>LASTNAME</b></label>
+		   <input type ="text" name ="lastname" id="lastname" class="w3-input w3-border">
+		 </p>
+		 <p>
+		   <label><b>FIRSTNAME</b></label>
+		   <input type ="text" name ="firstname" id="firstname" class="w3-input w3-border">
+		 </p>
+		 <p>
+		   <label><b>COURSE</b></label>
+		   <select name = "course" id="course" class="w3-select w3-border">
+		        <option value ="BSCS">COMPUTER SCIENCE</option>
+                <option value ="BSIT">INFORMATION TECHONOLOGY</option> 				
+                <option value ="BSHM">HOSPITALITY MANAGEMENT</option> 				
+                <option value ="BSCJ">CRIMINOLOGY</option> 				
+                <option value ="BSE">EDUCATION</option> 				
+			</select>
+		 </p>
+		 <p>
+		   <label><b>LEVEL</b></label>
+		   <select name = "level" id="level" class="w3-select w3-border">
+		        <option value ="1">FIRST YEAR</option>
+                <option value ="2">SECOND YEAR</option> 				
+                <option value ="3">THIRD YEAR</option> 				
+                <option value ="4">FOURTH YEAR</option> 				
+            </select>
+		 </p>
+		 <p class ="w3-right">
+		   <button class ="w3-button w3-blue" onclick="takepicture()">SNAP</button>
+		 </p>
+	   </div>
+	</div>
+    <div class="w3-half">
+	  <div class= "w3-card-4 w3-white w3-container w3-padding">
+	   <center>
+	    <div id ="myresult"></div>
+	   </center>
+	   <br>
+	   <table class= "w3-table-all w3-card-4 ">
+	    <tr>
+		   <td><b>IDNO</b></td>
+		   <td><div id="myidno"/></td>
+		</tr>
+		 <tr>
+		   <td><b>LASTNAME</b></td>
+		   <td><div id="mylastname"/></td>
+		</tr>
+		 <tr>
+		   <td><b>FIRTSNAME</b></td>
+		   <td><div id="myfirstname"/></td>
+		</tr>
+		 <tr>
+		   <td><b>COURSE</b></td>
+		   <td><div id="mycourse"/></td>
+		</tr>
+		 <tr>
+		   <td><b>LEVEL</b></td>
+		   <td><div id="mylevel"/></td>
+		</tr>
+	   </table>
+	   <p class ="w3-right"> 
+	     <button class ="w3-button w3-blue" onclick="savestudent()">SAVE</button>
+	   </p>
+	   </div>
+   </div>
+ </div>
+ {% endblock %}
